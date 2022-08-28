@@ -35,4 +35,35 @@ public class ThreadDemo1 {
         },"INCR").start();
     }
 
+    @Test
+    public void test2() {
+        ShareLock shared = new ShareLock();
+        //线程一
+        new Thread(()->{
+            for (int i = 0; i < 10; i++) {
+                shared.add();
+            }
+        },"ADD").start();
+
+        //线程二
+        new Thread(()->{
+            for (int i = 0; i < 10; i++) {
+                shared.incr();
+            }
+        },"INCR").start();
+        //线程三
+        new Thread(()->{
+            for (int i = 0; i < 10; i++) {
+                shared.add();
+            }
+        },"ADD2").start();
+
+        //线程四
+        new Thread(()->{
+            for (int i = 0; i < 10; i++) {
+                shared.incr();
+            }
+        },"INCR2").start();
+    }
+
 }
