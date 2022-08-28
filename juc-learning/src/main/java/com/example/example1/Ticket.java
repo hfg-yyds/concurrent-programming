@@ -45,11 +45,18 @@ public class Ticket {
     public  void saleLock() {
         //上锁
         lock.lock();
-        if (number > 0) {
-            number--;
-            log.info(Thread.currentThread().getName()+"卖了一张票"+" 还剩{}张票",number);
+        try {
+            if (number > 0) {
+                number--;
+                log.info(Thread.currentThread().getName()+"卖了一张票"+" 还剩{}张票",number);
+            }
+        } finally {
+            /**
+             * 这样写的原因是如果出现异常也要释放当前线程的锁
+             * 否则就会阻塞该线程
+             */
+            lock.unlock();
         }
-        lock.unlock();
     }
 
 }
