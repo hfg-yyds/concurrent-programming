@@ -100,11 +100,12 @@ public class ThreadDemo8 {
 
                 try {
                     TimeUnit.SECONDS.sleep(new Random(5).nextInt());
+                    System.out.println(Thread.currentThread().getName()+"号汽车离开车位了......");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
+                } finally {
+                    semaphore.release();
                 }
-                System.out.println(Thread.currentThread().getName()+"号汽车离开车位了......");
-                semaphore.release();
             },""+i).start();
         }
     }
