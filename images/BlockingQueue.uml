@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.util.concurrent.BlockingQueue</OriginalElement>
+  <nodes>
+    <node x="198.0" y="91.0">java.util.concurrent.ArrayBlockingQueue</node>
+    <node x="0.0" y="91.0">java.util.concurrent.DelayQueue</node>
+    <node x="230.5" y="0.0">java.util.concurrent.BlockingQueue</node>
+    <node x="500.0" y="91.0">java.util.concurrent.LinkedBlockingQueue</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.util.concurrent.LinkedBlockingQueue" target="java.util.concurrent.BlockingQueue">
+      <point x="0.0" y="-20.5" />
+      <point x="647.5" y="66.0" />
+      <point x="411.33333333333326" y="66.0" />
+      <point x="72.33333333333326" y="20.5" />
+    </edge>
+    <edge source="java.util.concurrent.DelayQueue" target="java.util.concurrent.BlockingQueue">
+      <point x="0.0" y="-20.5" />
+      <point x="89.0" y="66.0" />
+      <point x="266.6666666666667" y="66.0" />
+      <point x="-72.33333333333331" y="20.5" />
+    </edge>
+    <edge source="java.util.concurrent.ArrayBlockingQueue" target="java.util.concurrent.BlockingQueue">
+      <point x="0.0" y="-20.5" />
+      <point x="0.0" y="20.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="397.5" y="66.0" />
+  <SelectedNodes>
+    <node>java.util.concurrent.LinkedBlockingQueue</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -42,7 +42,7 @@ public class Ticket {
     /**
      * 操作方法 买票
      */
-    public  void saleLock() {
+    public void saleLock() {
         //上锁
         lock.lock();
         try {
